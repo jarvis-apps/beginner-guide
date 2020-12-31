@@ -7,10 +7,15 @@ An App provides an extension for the Jarvis application and needs to follow a fe
 # Contents
 
 - [Important Directories/Files](#important-directoriesfiles)
-	- [`app.json`](#appjson)
-	- [`setup.py`](#setuppy)
+	- [`logs/`](#logslog)
+		- [`*.log`](#logslog)
+	- [`system/`](#systemappjson)
+		- [`app.json`](#systemappjson)
+		- [`setup.py`](#systemsetuppy)
+	- [`web-extension/`](#web-extensionconfigjson)
+		- [`config.json`](#web-extensionconfigjson)
+		- [`extension-script.php/.html`](#web-extensionextension-scriptphphtml)
 	- [`README.md`](#readmemd)
-	- [`*.log`](#log)
 - [Communication/MQTT](#communicationmqtt)
 - [Web Extensions](#web-extensions)
 
@@ -72,7 +77,7 @@ The `./log` directory should contain logs for your application. You can keep mor
 ### `web-extension/config.json`
 
 If you want to use a web-extension make sure to create the `web-extension` directory and configure it with the config.json file:
-```json
+```javascript
 {
 	"path": "/bluetooth",	// the browser path for your script (should be the file parameter without .php or .html)
 	"material_icon": "bluetooth",	// name of the material icon for the nav bar (take from https://material.io/resources/icons/?style=round)
